@@ -17,7 +17,6 @@ const CardContainer = css`
 `;
 
 const PokemonCard = ({ pokemon }) => {
-  console.log(pokemon);
   return (
     <div css={CardContainer}>
       <h2>

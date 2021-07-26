@@ -16,11 +16,11 @@ const PokemonSearchBar = () => {
     console.log("the data ", data);
     console.log("the history ", history);
 
-    history.push(`/pokemon/${data.pokemon._id}`);
+    history.push(`/pokemon/${data.pokemon.id}`);
   }, [data]);
 
   const searchPokemon = () => {
-    console.log(inputRef.current.value);
+    console.log("input ref current val ", inputRef.current.value);
     loadPokemon({
       variables: {
         name: inputRef.current.value,
@@ -29,7 +29,6 @@ const PokemonSearchBar = () => {
   };
 
   const searchInputChange = (event) => {
-    // console.log(event.key, event.keyCode);
     if (event.key === "Enter" || event.keyCode === 13) {
       loadPokemon({
         variables: {

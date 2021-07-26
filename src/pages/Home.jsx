@@ -1,5 +1,5 @@
 import React from "react";
-import PokemonCardFromId from "../components/PokemonCard";
+import PokemonCardFromId from "../components/PokemonCardFromId";
 import PokemonSearchBar from "../components/PokemonSearchBar";
 
 const Home = () => {
