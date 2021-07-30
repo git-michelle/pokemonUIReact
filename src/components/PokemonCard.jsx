@@ -12,7 +12,7 @@ const CardContainer = css`
   transition: transform 0.1s ease-in-out;
 
   :hover {
-    transform: scale(1.2);
+    transform: scale(1.02);
   }
 `;
 
