@@ -48,4 +48,21 @@ const UPDATE_POKEMON_COMMENT = gql`
   }
 `;
 
-export { CREATE_POKEMON_COMMENT, UPDATE_POKEMON_COMMENT };
+const USER_SIGN_UP = gql`
+  mutation signUp($username: String, $password: String!) {
+    signIn(username: $username, password: $password)
+  }
+`;
+
+const USER_SIGN_IN = gql`
+  mutation signIn($username: String, $password: String!) {
+    signIn(username: $username, password: $password)
+  }
+`;
+
+export {
+  CREATE_POKEMON_COMMENT,
+  UPDATE_POKEMON_COMMENT,
+  USER_SIGN_UP,
+  USER_SIGN_IN,
+};

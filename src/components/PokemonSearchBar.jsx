@@ -30,11 +30,7 @@ const PokemonSearchBar = () => {
 
   const searchInputChange = (event) => {
     if (event.key === "Enter" || event.keyCode === 13) {
-      loadPokemon({
-        variables: {
-          name: inputRef.current.value,
-        },
-      });
+      searchPokemon();
     }
   };
 

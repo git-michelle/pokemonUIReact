@@ -8,6 +8,22 @@ import {
 } from "../graphql/mutations";
 import { css, jsx } from "@emotion/react";
 
+const commentSectionContainer = css`
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 500px;
+`;
+
+const newCommentButton = css`
+  background-color: #30bef7;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin-top: 5px;
+`;
+
 const commentButton = css`
   margin-right: 20px;
   background-color: transparent;
@@ -16,12 +32,11 @@ const commentButton = css`
 `;
 
 const commentContainer = css`
-  margin: 20px 10px;
+  margin: 10px 0;
   border-radius: 20px;
   background-color: whitesmoke;
   border: 1px solid lightgray;
   padding: 15px;
-  width: 500px;
 `;
 
 const Comments = ({ id }) => {
@@ -29,7 +44,8 @@ const Comments = ({ id }) => {
 
   const textAreaRef = useRef(null);
 
-  const pokeId = "60fed7d1f7299725ca9bb1dc";
+  const pokeId = id;
+  console.log("_id in comments.jsx is ", pokeId);
 
   // read comments
   const {
@@ -140,10 +156,12 @@ const Comments = ({ id }) => {
     return <pre>Error: {JSON.stringify(commentsError, null, 3)}</pre>;
 
   return (
-    <div>
+    <div css={commentSectionContainer}>
       <h2>Add new comment</h2>
-      <textarea ref={textAreaRef} />
-      <button onClick={createNewComment}>Add comment!</button>
+      <textarea ref={textAreaRef} rows="5" name="newCommentInputBox" />
+      <button onClick={createNewComment} css={newCommentButton}>
+        Add comment!
+      </button>
       <h2>Comments</h2>
       {renderComments()}
     </div>
