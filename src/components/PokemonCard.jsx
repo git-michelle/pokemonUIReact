@@ -10,6 +10,9 @@ const CardContainer = css`
   margin: 10px;
   max-width: 500px;
   transition: transform 0.1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   :hover {
     transform: scale(1.02);

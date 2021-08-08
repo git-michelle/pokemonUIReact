@@ -37,6 +37,7 @@ const NavBar = () => {
     return path === location.pathname ? ActiveLink : InactiveLink;
   };
 
+  console.log("navbar mounting");
   return (
     <nav>
       <ul css={NavListStyle}>

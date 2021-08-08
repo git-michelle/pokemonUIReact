@@ -42,6 +42,7 @@ const SignIn = () => {
   const [form, setForm] = useState({ username: null, password: null });
   const [signIn, { data, loading, error }] = useMutation(USER_SIGN_IN, {
     onCompleted: (data) => {
+      console.log("hello ", data);
       localStorage.setItem("token", data.signIn);
       history.push("/");
     },
@@ -79,7 +80,7 @@ const SignIn = () => {
           />
         </div>
 
-        <button type="submit">Sign Up</button>
+        <button type="submit">Sign In</button>
       </form>
       {loading && <p>Signing in...</p>}
       {error && <pre>{error.message}</pre>}

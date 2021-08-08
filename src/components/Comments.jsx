@@ -22,6 +22,13 @@ const newCommentButton = css`
   border: none;
   padding: 10px;
   margin-top: 5px;
+  cursor: pointer;
+  :hover {
+    border: 2px solid #30bef7;
+    background-color: transparent;
+    padding: 8px;
+    color: #30bef7;
+  }
 `;
 
 const commentButton = css`

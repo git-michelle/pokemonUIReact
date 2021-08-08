@@ -49,13 +49,13 @@ const UPDATE_POKEMON_COMMENT = gql`
 `;
 
 const USER_SIGN_UP = gql`
-  mutation signUp($username: String, $password: String!) {
-    signIn(username: $username, password: $password)
+  mutation signUp($username: String!, $password: String!) {
+    signUp(username: $username, password: $password)
   }
 `;
 
 const USER_SIGN_IN = gql`
-  mutation signIn($username: String, $password: String!) {
+  mutation signIn($username: String!, $password: String!) {
     signIn(username: $username, password: $password)
   }
 `;
